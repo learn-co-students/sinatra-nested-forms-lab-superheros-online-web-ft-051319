@@ -6,18 +6,19 @@ class App < Sinatra::Base
     
     get ('/'){erb :super_hero}
     post '/teams' do 
-      # params[:team][:name]
-      # params[:team][:motto]
-      # params[:team][:member][0][:name]
-      # params[:team][:member][0][:power]
-      # params[:team][:member][0][:biography]
-      # params[:team][:member][1][:name]
-      # params[:team][:member][1][:power]
-      # params[:team][:member][1][:biography]
-      # params[:team][:member][2][:name]
-      # params[:team][:member][2][:power]
-      # params[:team][:member][2][:biography]
       
+      @team_name = params[:team][:name]
+      @team_motto = params[:team][:motto]
+      @member1_name = params[:team][:member][0][:name]
+      @member1_power = params[:team][:member][0][:power]
+      @member1_bio = params[:team][:member][0][:biography]
+      @member2_name = params[:team][:member][1][:name]
+      @member2_power = params[:team][:member][1][:power]
+      @member2_bio = params[:team][:member][1][:biography]
+      @member3_name = params[:team][:member][2][:name]
+      @member3_power = params[:team][:member][2][:power]
+      @member3_bio = params[:team][:member][2][:biography]
+      erb :team
     end
 
 
